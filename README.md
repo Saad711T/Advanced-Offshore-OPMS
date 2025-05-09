@@ -1,6 +1,12 @@
 # Advanced-Offshore-OPMS
 ## Overview
-a software process and engineering project for Offshore Oil Platform Management System , This is capstone project for course "Software Engineering 502435-3" in [Taif University](https://tu.edu.sa)
+a software process and engineering project for Offshore Oil Platform Management System , This is capstone project for course "Software Engineering 502435-3" in [Taif University](https://tu.edu.sa).
+
+## Requirements and Project structure
+- **Python** and libraries in `offshore-platform/backend/requirements.txt` : Used Django to back-end development.
+- **Javascript** : Used React framework in front-end development.
+- **Docker**
+- **Flutter** : Used in cross-platforming mobile development.
 
 ## Credits
 ##### Very Thanks for other students
