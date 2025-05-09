@@ -1,0 +1,59 @@
+# docker-compose.yml
+
+version: "3.9"
+services:
+  backend:
+    build: ./backend
+    container_name: offshore-backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - mongo
+    environment:
+      - POSTGRES_DB=offshore
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+
+  frontend:
+    build: ./frontend
+    container_name: offshore-frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  postgres:
+    image: postgres:13
+    container_name: offshore-postgres
+    environment:
+      POSTGRES_DB: offshore
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  mongo:
+    image: mongo:5
+    container_name: offshore-mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/data/db
+
+volumes:
+  pgdata:
+  mongodata:
