@@ -4,9 +4,10 @@ a software process and engineering project for Offshore Oil Platform Management 
 
 ## Requirements and Project structure
 ### Presentation
+`Advanced OPMS.pdf`
 Created by **Microsoft word** , The document was created and written jointly by participating students.
 ### Code
-Created by `0xSaad/Saad Almalki` with :
+Created by *0xSaad/Saad Almalki* with :
 - **Python** and libraries in `offshore-platform/backend/requirements.txt` : Used Django to back-end development.
 - **Javascript** : Used React framework in front-end development.
 - **Docker**
