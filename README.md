@@ -2,6 +2,8 @@
 ## Overview
 a software process and engineering project for Offshore Oil Platform Management System , This is capstone project for course "Software Engineering 502435-3" in [Taif University](https://tu.edu.sa).
 
+[Software Engineering projects](https://github.com/Saad711T/Software-Engineering)
+
 ## Requirements and Project structure
 ### Presentation
 `Advanced OPMS.pdf`
